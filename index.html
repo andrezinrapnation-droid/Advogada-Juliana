@@ -1,0 +1,380 @@
+Aqui está o arquivo HTML completo e corrigido com o número +55 11 98651-8193 substituindo todos os números anteriores em todos os locais (WhatsApp, formulário, telefone de contato). Removi o código duplicado e estruturei corretamente.​
+
+xml
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advogada Juliana | Seu Direito, Nossa Missão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #4299e1;
+            --gold: #d69e2e;
+            --light: #f7fafc;
+            --white: #ffffff;
+            --shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.7; 
+            color: #2d3748; 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        header { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(20px);
+            z-index: 1000; 
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            color: var(--primary); 
+            text-decoration: none;
+        }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { 
+            color: #4a5568; 
+            text-decoration: none; 
+            font-weight: 500; 
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .cta-header { 
+            background: linear-gradient(135deg, var(--accent), #63b3ed); 
+            color: white; 
+            padding: 0.8rem 2rem; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .cta-header:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(66,153,225,0.3); }
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            cursor: pointer; 
+            gap: 4px; 
+            z-index: 2001;
+        }
+        .hamburger span { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--primary); 
+            transition: 0.3s; 
+        }
+        .nav-mobile { 
+            position: fixed; 
+            top: 0; 
+            right: -100%; 
+            width: 300px; 
+            height: 100vh; 
+            background: rgba(255,255,255,0.98); 
+            backdrop-filter: blur(20px);
+            transition: right 0.3s ease;
+            padding: 5rem 2rem 2rem;
+            z-index: 2000;
+        }
+        .nav-mobile-checkbox { display: none; }
+        .nav-mobile-checkbox:checked ~ .nav-mobile { right: 0; }
+        .nav-mobile-checkbox:checked + .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-mobile-checkbox:checked + .hamburger span:nth-child(2) { opacity: 0; }
+        .nav-mobile-checkbox:checked + .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        .nav-mobile ul { list-style: none; }
+        .nav-mobile li { margin-bottom: 2rem; }
+        .nav-mobile a { font-size: 1.3rem; color: var(--primary); text-decoration: none; display: block; }
+        .hero { 
+            min-height: 100vh; 
+            background: linear-gradient(135deg, rgba(26,54,93,0.9) 0%, rgba(44,82,130,0.9) 100%), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f7fafc" width="1200" height="800"/><path fill="%23e2e8f0" opacity="0.5" d="M0 400Q300 200 600 400T1200 400V800H0z"/></svg>'); 
+            display: flex; 
+            align-items: center; 
+            text-align: center; 
+            color: white; 
+            padding: 120px 2rem 80px;
+        }
+        .hero-content h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: clamp(2.5rem, 5vw, 4.5rem); 
+            margin-bottom: 1.5rem; 
+        }
+        .hero-content p { 
+            font-size: 1.25rem; 
+            max-width: 600px; 
+            margin: 0 auto 2.5rem; 
+        }
+        .cta-hero { 
+            background: var(--gold); 
+            color: var(--primary); 
+            padding: 1.2rem 3rem; 
+            border-radius: 50px; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            text-decoration: none; 
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(214,158,46,0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-hero:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(214,158,46,0.5); }
+        section { padding: 6rem 0; }
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; 
+            text-align: center; 
+            margin-bottom: 3rem; 
+            color: var(--primary);
+        }
+        h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .about { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            align-items: center; 
+            margin-top: 4rem;
+        }
+        .about-img { 
+            position: relative; 
+            height: 450px; 
+            border-radius: 20px; 
+            overflow: hidden;
+            background: linear-gradient(135deg, #f7fafc, #edf2f7), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450"><rect fill="%234299e1" rx="20" ry="20" width="500" height="450"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .about-text p { font-size: 1.1rem; color: #4a5568; margin-bottom: 1.5rem; }
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2rem; 
+            margin-top: 4rem;
+        }
+        .service-card { 
+            background: white; 
+            padding: 2.5rem 2rem; 
+            border-radius: 20px; 
+            text-align: center; 
+            box-shadow: var(--shadow); 
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .service-card:hover { 
+            transform: translateY(-10px) rotate(1deg); 
+            box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+        }
+        .service-icon { 
+            width: 80px; 
+            height: 80px; 
+            background: linear-gradient(135deg, var(--accent), #63b3ed); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 1.5rem; 
+            font-size: 2rem; 
+            color: white;
+        }
+        .contact { background: var(--light); }
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem; 
+            margin-top: 4rem;
+        }
+        .contact-form input, .contact-form textarea { 
+            width: 100%; 
+            padding: 1.2rem; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 12px; 
+            font-family: inherit; 
+            font-size: 1rem; 
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        .contact-form input:focus, .contact-form textarea:focus { 
+            outline: none; 
+            border-color: var(--accent); 
+            box-shadow: 0 0 0 3px rgba(66,153,225,0.1);
+        }
+        .contact-form button { 
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+            color: white; 
+            padding: 1.2rem 3rem; 
+            border: none; 
+            border-radius: 12px; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(26,54,93,0.3); }
+        .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+        .contact-item i { color: var(--accent); font-size: 1.5rem; margin-top: 0.2rem; }
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            text-align: center; 
+            padding: 3rem 0 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; }
+            .about, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .hero { padding: 100px 1rem 60px; text-align: left; }
+            .hero-content { max-width: 90%; }
+            .nav-mobile { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Advogada Juliana</a>
+            <input type="checkbox" id="nav-toggle" class="nav-mobile-checkbox">
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5511986518193?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Advogada%20Juliana." class="cta-header" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <label for="nav-toggle" class="nav-mobile" id="navMobile">
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </label>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Seu Direito, Nossa Missão</h1>
+                <p>Com empatia e expertise, defendemos seus interesses com a dedicação que você merece. Mais de 12 anos transformando vidas através da justiça.</p>
+                <a href="#contato" class="cta-hero">Agende sua Consulta Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="about container">
+        <div class="about-text">
+            <h2>Advocacia com Alma e Precisão</h2>
+            <p>Cada caso é único. Por isso, combinamos estratégia jurídica afiada com compreensão humana genuína. Nossa missão é ouvir, entender e vencer.</p>
+            <p>Atuamos em todo Brasil com foco em resultados reais e duradouros para pessoas e empresas que confiam em nossa palavra.</p>
+            <a href="#contato" class="cta-hero" style="margin-top: 1rem; display: inline-block;">Conheça nossa Abordagem</a>
+        </div>
+        <div class="about-img"></div>
+    </section>
+
+    <section id="servicos" class="container">
+        <h2>Nossas Especialidades</h2>
+        <div class="services-grid container">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-heart"></i></div>
+                <h3>Direito de Família</h3>
+                <p>Guarda, pensão, divórcio e união estável com sensibilidade e proteção aos interesses familiares.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Direito Trabalhista</h3>
+                <p>Reclamações trabalhistas, defesa patronal e negociações coletivas com foco em resultados práticos.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Direito Civil</h3>
+                <p>Contratos, responsabilidade civil, consumidor e imobiliário com máxima diligência técnica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Vamos Conversar Sobre Seu Caso</h2>
+            <div class="contact-grid">
+                <form class="contact-form" action="https://formsubmit.co/seu-email@exemplo.com" method="POST">
+                    <input type="text" name="nome" placeholder="Seu Nome Completo" required>
+                    <input type="email" name="email" placeholder="Seu Email" required>
+                    <input type="tel" name="telefone" placeholder="(11) 98651-8193" required>
+                    <textarea name="mensagem" placeholder="Conte-nos sobre sua situação. Estamos aqui para ajudar." rows="6" required></textarea>
+                    <button type="submit">Solicitar Consulta Gratuita</button>
+                    <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Escritório</h4>
+                            <p>Rua das Acácias, 456<br>Jardins - São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Atendimento</h4>
+                            <p>Seg-Sex: 8h às 18h<br>Sáb: 9h às 13h</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 98651-8193</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Advogada Juliana. Excelência com humanidade. <br>Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
